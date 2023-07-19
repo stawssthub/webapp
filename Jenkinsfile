@@ -16,6 +16,12 @@ pipeline {
                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/stawssthub/webapp.git']])
             }
         }
+
+        stage ('mvn test) {
+               steps {
+                   sh 'mvn test'
+               }
+        }
         
         stage ('build cod') {
             steps{
